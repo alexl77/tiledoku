@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tiledoku Support</title>
+<style>
+:root { --ground:#efedf3; --surface:#fff; --ink:#282338; --muted:#6c6680; --line:#dcd7e5; --accent:#c2416b; }
+@media (prefers-color-scheme: dark) {
+  :root { --ground:#16141c; --surface:#221f2b; --ink:#f1eef8; --muted:#a39db6; --line:#3a3548; --accent:#f07aa0; }
+}
+body { margin:0; background:var(--ground); color:var(--ink); font:17px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width:680px; margin:0 auto; padding:40px 16px 64px; }
+header { display:flex; align-items:center; gap:16px; margin-bottom:28px; }
+header img { width:72px; height:72px; border-radius:16px; }
+h1 { margin:0; font-size:30px; line-height:1.1; }
+header p { margin:4px 0 0; color:var(--muted); }
+h2 { font-size:19px; margin:28px 0 6px; }
+section { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:4px 20px 18px; margin-bottom:18px; }
+p { margin:8px 0; }
+a { color:var(--accent); }
+footer { color:var(--muted); font-size:14px; margin-top:32px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <img src="data:image/webp;base64,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" alt="">
+  <div><h1>Tiledoku</h1><p>Picture sudoku with cute tiles</p></div>
+</header>
+
+<section>
+  <h2>Contact</h2>
+  <p>Questions, bug reports and ideas for new tile sets are all welcome. Email
+  <a href="mailto:tiledoku.app@outlook.com">tiledoku.app@outlook.com</a> and I'll get back to you.</p>
+  <p>If something went wrong, it helps to mention your device, the iOS version and what you were doing.</p>
+</section>
+
+<section>
+  <h2>How do I play?</h2>
+  <p>Fill the grid so every row, column and 3×3 box holds each of the nine tiles exactly once. Every puzzle has
+  exactly one solution.</p>
+
+  <h2>How do I restore my purchases?</h2>
+  <p>Tap any locked tile set, then tap <b>Restore purchases</b>. Make sure you're signed in with the same Apple
+  Account you bought them with.</p>
+
+  <h2>What do the packs include?</h2>
+  <p>Each pack unlocks a group of themed tile sets, and any set added to a pack later is yours too. Tiledoku Plus
+  unlocks every set, including all future ones. All purchases are one-time, with no subscription.</p>
+
+  <h2>When does the daily puzzle change?</h2>
+  <p>At midnight on your device. It's the same puzzle for everyone that day and free for all players.</p>
+
+  <h2>Where is my progress saved?</h2>
+  <p>On your device. Deleting the app deletes your stats and streak; purchases can always be restored.</p>
+</section>
+
+<p><a href="privacy.html">Privacy policy</a></p>
+<footer>© 2026 Alex Luong</footer>
+</main>
+</body>
+</html>
